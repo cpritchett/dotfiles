@@ -42,6 +42,11 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 #source ~/.fresh/build/shell.sh
 
+# Skip the not really helping Ubuntu global compinit
+skip_global_compinit=1
+zinit ice blockf
+zinit light zsh-users/zsh-completions
+
 # Alias vim to neovim
 if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
