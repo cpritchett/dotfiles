@@ -1,9 +1,13 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+
+# map color to the nearest color available
+[[ $COLORTERM = *(24bit|truecolor)* ]] || zmodload zsh/nearcolor
+
+
+#History 
+HISTFILE=~/.zsh_history
+HISTSIZE=SAVEHIST=10000
+setopt sharehistory
+setopt extendedhistory
 
 # Download Znap, if it's not there yet.
 [[ -f ~/Git/zsh-snap/znap.zsh ]] ||
@@ -26,17 +30,6 @@ znap eval iterm2 'curl -fsSL https://iterm2.com/shell_integration/zsh'
 # `znap function` lets you lazy-load features you don't always need.
 znap function _pyenv pyenvn 'eval "$( pyenv init - --no-rehash )"'
 compctl -K    _pyenv pyenv
-
-#history
-HISTFILE=~/.zhistory
-HISTSIZE=SAVEHIST=10000
-setopt sharehistory
-setopt extendedhistory
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-#source ~/.fresh/build/shell.sh
 
 # Skip the not really helping Ubuntu global compinit
 skip_global_compinit=1
