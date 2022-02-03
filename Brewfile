@@ -1,5 +1,11 @@
-install iterm
-install python3
+install iterm2
+install firefox
+install bartender
+install aerial
+install 1password
+install alfred
 install neovim
 install glances
-install kitty
+install chezmoi
+install hub
+install visual-studio-code
