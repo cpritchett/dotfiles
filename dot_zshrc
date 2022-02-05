@@ -2,37 +2,55 @@
 # map color to the nearest color available
 [[ $COLORTERM = *(24bit|truecolor)* ]] || zmodload zsh/nearcolor
 
-
 #History 
 HISTFILE=~/.zsh_history
 HISTSIZE=SAVEHIST=10000
 setopt sharehistory
 setopt extendedhistory
 
-# Download Znap, if it's not there yet.
-[[ -f ~/Git/zsh-snap/znap.zsh ]] ||
-    git clone --depth 1 -- \
-        https://github.com/marlonrichert/zsh-snap.git ~/Git/zsh-snap
+if [[ ! -f $HOME/.zi/bin/zi.zsh ]]; then
+  print -P "%F{33}▓▒░ %F{160}Installing (%F{33}z-shell/zi%F{160})…%f"
+  command mkdir -p "$HOME/.zi" && command chmod g-rwX "$HOME/.zi"
+  command git clone -q --depth=1 --branch "main" https://github.com/z-shell/zi "$HOME/.zi/bin" && \
+    print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
+    print -P "%F{160}▓▒░ The clone has failed.%f%b"
+fi
+source "$HOME/.zi/bin/zi.zsh"
+autoload -Uz _zi
+(( ${+_comps} )) && _comps[zi]=_zi
+# examples here -> https://z-shell.pages.dev/docs/gallery/collection
+zicompinit # <- https://z-shell.pages.dev/docs/gallery/collection#minimal
+zi light-mode for \
+  z-shell/z-a-meta-plugins \
+  @annexes @molovo
 
-source ~/Git/zsh-snap/znap.zsh  # Start Znap
+### End of ZI's installer chunk
 
-# `znap prompt` makes your prompt visible in just 15-40ms!
-znap prompt sindresorhus/pure
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zi light-mode for \
+    z-shell/z-a-patch-dl \
+    cpritchett/z-a-as-monitor \
+    z-shell/z-a-bin-gem-node
 
-# `znap source` automatically downloads and starts your plugins.
-znap source marlonrichert/zsh-autocomplete
-znap source zsh-users/zsh-autosuggestions
-znap source zsh-users/zsh-syntax-highlighting
 
-# `znap eval` caches and runs any kind of command output for you.
-znap eval iterm2 'curl -fsSL https://iterm2.com/shell_integration/zsh'
+# Two regular plugins loaded without tracking.
+zi light marlonrichert/zsh-autocomplete
+zi light zsh-users/zsh-autosuggestions
+zi light z-shell/fast-syntax-highlighting
 
-# `znap function` lets you lazy-load features you don't always need.
-znap function _pyenv pyenvn 'eval "$( pyenv init - --no-rehash )"'
-compctl -K    _pyenv pyenv
+# Plugin history-search-multi-word loaded with tracking.
+zi load z-shell/history-search-multi-word
+
+zi ice depth=1; zi light romkatv/powerlevel10k
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Skip the not really helping Ubuntu global compinit
 skip_global_compinit=1
+zi ice blockf
+zi light zsh-users/zsh-completions
 
 # Alias vim to neovim
 if type nvim > /dev/null 2>&1; then
