@@ -1,0 +1,18 @@
+# This file is managed by chezmoi.
+# Edit it with `chezmoi edit ~/.nanorc`
+# To apply, run `chezmoi apply -v` after saving the file.
+
+set tabsize 4
+set tabstospaces
+set autoindent
+set trimblanks
+set linenumbers
+set constantshow
+set titlecolor white,red
+set keycolor cyan
+set functioncolor cyan
+set numbercolor yellow
+set mouse
+{{ if eq .chezmoi.os "darwin" }}
+include /opt/homebrew/Cellar/nanorc/*/share/nanorc/*.nanorc
+{{ end }}
