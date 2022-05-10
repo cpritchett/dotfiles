@@ -7,6 +7,24 @@
 . "$HOME/.fig/shell/zshrc.pre.zsh"
 {{ end }}
 
+{{ if eq .chezmoi.os "linux" }}
+zstyle ':zim:zmodule' use 'degit'
+ZIM_HOME=~/.zim
+# Download zimfw plugin manager if missing.
+if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
+  curl -fsSL --create-dirs -o ${ZIM_HOME}/zimfw.zsh \
+      https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
+fi
+# Initialize modules.
+source ${ZIM_HOME}/init.zsh
+
+{{ end }}
+
+
+
+
+
+
 #History 
 HISTFILE=~/.zsh_history
 HISTSIZE=SAVEHIST=10000
@@ -55,6 +73,13 @@ export SSH_AUTH_SOCK=~/.1password/agent.sock
 export PATH=/home/cpritchett/bin:$PATH
 {{ end }}
 
+# spaceship prompt (for not-osx)
+{{ if eq .chezmoi.os "linux" }}
+export fpath=( "${ZDOTDIR:-$HOME}/.zfunctions" $fpath 
+autoload -U promptinit; promptinit
+prompt spaceship
+)
+{{ end }}
 
 export CLOUDSDK_PYTHON_SITEPACKAGES=1
 
