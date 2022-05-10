@@ -1,4 +1,8 @@
 # This is Git's per-user configuration file.
+# This file is managed with chezmoi
+# Please edit with `chezmoi edit ~/.gitconfig`
+# After saving the file, run `chezmoi apply -v`
+
 [user]
 # Please adapt and uncomment the following lines:
 	name = Chad Pritchett

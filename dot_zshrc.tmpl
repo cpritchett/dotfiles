@@ -1,3 +1,7 @@
+# This file is managed by chezmoi.
+# Edit it with `chezmoi edit ~/.zshrc`
+# To apply, run `chezmoi apply -v` after saving the file.
+
 {{ if eq .chezmoi.os "darwin" }}
 # Fig pre block. Keep at the top of this file.
 . "$HOME/.fig/shell/zshrc.pre.zsh"
@@ -28,7 +32,7 @@ alias ll='ls -lah'
 export WHALEBREW_INSTALL_PATH=~/.whalebrew/bin/
 export WHALEBREW_CONFIG_DIR=~/.whalebrew/
 export PATH=${PATH}:${WHALEBREW_INSTALL_PATH}
-export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
+export PATH=/opt/homebrew/opt/grep/libexec/gnubin:$PATH
 
 alias nano='/opt/homebrew/bin/nano'
 
@@ -40,16 +44,21 @@ alias nano='/opt/homebrew/bin/nano'
 eval "$(pyenv init -)"
 {{ end }}
 
-export EDITOR=vi
+export EDITOR=vim
 export VISUAL="code --wait"
 
 # 1password ssh agent
 export SSH_AUTH_SOCK=~/.1password/agent.sock
 
+# OCI
+{{ if eq .chezmoi.os "linux" }}
+export PATH=/home/cpritchett/bin:$PATH
+{{ end }}
+
 
 export CLOUDSDK_PYTHON_SITEPACKAGES=1
 
-export PATH="/opt/puppetlabs/bolt/bin:$PATH"
+export PATH=/opt/puppetlabs/bolt/bin:$PATH
 
 {{ if eq .chezmoi.os "darwin" }}
 # Fig post block. Keep at the bottom of this file.
