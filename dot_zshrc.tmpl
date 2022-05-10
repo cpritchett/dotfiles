@@ -1,5 +1,7 @@
+{{ if eq .chezmoi.os "darwin" }}
 # Fig pre block. Keep at the top of this file.
 . "$HOME/.fig/shell/zshrc.pre.zsh"
+{{ end }}
 
 #History 
 HISTFILE=~/.zsh_history
@@ -21,28 +23,35 @@ fi
 alias ls='ls -G'
 alias ll='ls -lah'
 
-# M1 darwin
+# Brew and Whalebrew for Mac
+{{ if eq .chezmoi.os "darwin" }}
+export WHALEBREW_INSTALL_PATH=~/.whalebrew/bin/
+export WHALEBREW_CONFIG_DIR=~/.whalebrew/
+export PATH=${PATH}:${WHALEBREW_INSTALL_PATH}
+export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
+
 alias nano='/opt/homebrew/bin/nano'
+
+{{ end }}
+
+
+# Python 
+{{ if eq .chezmoi.os "darwin" }}
+eval "$(pyenv init -)"
+{{ end }}
 
 export EDITOR=vi
 export VISUAL="code --wait"
 
-#whalebrew (darwin)
-export WHALEBREW_INSTALL_PATH=~/.whalebrew/bin/
-export WHALEBREW_CONFIG_DIR=~/.whalebrew/
-export PATH=${PATH}:${WHALEBREW_INSTALL_PATH}
+# 1password ssh agent
+export SSH_AUTH_SOCK=~/.1password/agent.sock
 
-export SSH_AUTH_SOCK=~/.1password/t/agent.sock
-
-
-# Python (darwin)
-eval "$(pyenv init -)"
 
 export CLOUDSDK_PYTHON_SITEPACKAGES=1
 
-export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
-
 export PATH="/opt/puppetlabs/bolt/bin:$PATH"
 
+{{ if eq .chezmoi.os "darwin" }}
 # Fig post block. Keep at the bottom of this file.
 . "$HOME/.fig/shell/zshrc.post.zsh"
+{{ end }}
