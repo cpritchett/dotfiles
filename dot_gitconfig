@@ -1,0 +1,11 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Chad Pritchett
+	email = chad@chadpritchett.com
+#[url "git@github.com:"]
+#	insteadOf = https://github.com/
+[core]
+	editor = vim
+[color]
+	ui = true

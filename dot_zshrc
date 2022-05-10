@@ -1,6 +1,5 @@
-
-# map color to the nearest color available
-[[ $COLORTERM = *(24bit|truecolor)* ]] || zmodload zsh/nearcolor
+# Fig pre block. Keep at the top of this file.
+. "$HOME/.fig/shell/zshrc.pre.zsh"
 
 #History 
 HISTFILE=~/.zsh_history
@@ -8,49 +7,6 @@ HISTSIZE=SAVEHIST=10000
 setopt sharehistory
 setopt extendedhistory
 
-if [[ ! -f $HOME/.zi/bin/zi.zsh ]]; then
-  print -P "%F{33}▓▒░ %F{160}Installing (%F{33}z-shell/zi%F{160})…%f"
-  command mkdir -p "$HOME/.zi" && command chmod g-rwX "$HOME/.zi"
-  command git clone -q --depth=1 --branch "main" https://github.com/z-shell/zi "$HOME/.zi/bin" && \
-    print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
-    print -P "%F{160}▓▒░ The clone has failed.%f%b"
-fi
-source "$HOME/.zi/bin/zi.zsh"
-autoload -Uz _zi
-(( ${+_comps} )) && _comps[zi]=_zi
-# examples here -> https://z-shell.pages.dev/docs/gallery/collection
-zicompinit # <- https://z-shell.pages.dev/docs/gallery/collection#minimal
-zi light-mode for \
-  z-shell/z-a-meta-plugins \
-  @annexes @molovo
-
-### End of ZI's installer chunk
-
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
-zi light-mode for \
-    z-shell/z-a-patch-dl \
-    cpritchett/z-a-as-monitor \
-    z-shell/z-a-bin-gem-node
-
-
-# Two regular plugins loaded without tracking.
-zi light marlonrichert/zsh-autocomplete
-zi light zsh-users/zsh-autosuggestions
-zi light z-shell/fast-syntax-highlighting
-
-# Plugin history-search-multi-word loaded with tracking.
-zi load z-shell/history-search-multi-word
-
-zi ice depth=1; zi light romkatv/powerlevel10k
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Skip the not really helping Ubuntu global compinit
-skip_global_compinit=1
-zi ice blockf
-zi light zsh-users/zsh-completions
 
 # Alias vim to neovim
 if type nvim > /dev/null 2>&1; then
@@ -61,3 +17,32 @@ fi
 if type hub > /dev/null 2>&1; then
   eval "$(hub alias -s)"
 fi
+
+alias ls='ls -G'
+alias ll='ls -lah'
+
+# M1 darwin
+alias nano='/opt/homebrew/bin/nano'
+
+export EDITOR=nano
+export VISUAL=nano
+
+#whalebrew (darwin)
+export WHALEBREW_INSTALL_PATH=~/.whalebrew/bin/
+export WHALEBREW_CONFIG_DIR=~/.whalebrew/
+export PATH=${PATH}:${WHALEBREW_INSTALL_PATH}
+
+export SSH_AUTH_SOCK=~/.1password/t/agent.sock
+
+
+# Python (darwin)
+eval "$(pyenv init -)"
+
+export CLOUDSDK_PYTHON_SITEPACKAGES=1
+
+export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
+
+export PATH="/opt/puppetlabs/bolt/bin:$PATH"
+
+# Fig post block. Keep at the bottom of this file.
+. "$HOME/.fig/shell/zshrc.post.zsh"
