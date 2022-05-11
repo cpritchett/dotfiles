@@ -2,3 +2,5 @@ Host *
    AddKeysToAgent yes
    IdentityAgent ~/.1password/agent.sock
 
+host *.github.com
+   IdentityFile ~/.ssh/id_ed25519_personal
