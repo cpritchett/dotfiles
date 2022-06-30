@@ -1,3 +1,7 @@
 {{- if ne .chezmoi.os "darwin" }}
 .zimrc
+.zshrc_darwin
 {{- end }}
+{{ if ne .chezmoi.os "linux" }}
+.zshrc_linux
+{{ end }}
