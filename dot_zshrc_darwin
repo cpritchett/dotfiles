@@ -1,0 +1,13 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
+# This file is managed by chezmoi.
+# Edit it with `chezmoi edit ~/.zshrc`
+# To apply, run `chezmoi apply -v` after saving the file.
+
+
+
+
+
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
