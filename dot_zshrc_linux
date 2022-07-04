@@ -35,3 +35,8 @@ export SSH_AUTH_SOCK=~/.1password/agent.sock
 export CLOUDSDK_PYTHON_SITEPACKAGES=1
 
 export PATH=/opt/puppetlabs/bolt/bin:$PATH
+
+export  PATH=~/bin/:$PATH
+
+autoload -U promptinit; promptinint
+prompt spaceship
