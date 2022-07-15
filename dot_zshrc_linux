@@ -38,5 +38,5 @@ export PATH=/opt/puppetlabs/bolt/bin:$PATH
 
 export  PATH=~/bin/:$PATH
 
-autoload -U promptinit; promptinint
+autoload -U promptinit; promptinit
 prompt spaceship
