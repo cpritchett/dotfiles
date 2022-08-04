@@ -38,5 +38,7 @@ export PATH=/opt/puppetlabs/bolt/bin:$PATH
 
 export  PATH=~/bin/:$PATH
 
+fpath=( "${ZDOTDIR:-$HOME}/.zfunctions" $fpath )
+
 autoload -U promptinit; promptinit
 prompt spaceship
