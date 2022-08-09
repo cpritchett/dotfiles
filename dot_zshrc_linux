@@ -36,7 +36,8 @@ export CLOUDSDK_PYTHON_SITEPACKAGES=1
 
 export PATH=/opt/puppetlabs/bolt/bin:$PATH
 
-export  PATH=~/bin/:$PATH
+export PATH=~/bin/:$PATH
+export PATH=~/.local/bin/:$PATH
 
 fpath=( "${ZDOTDIR:-$HOME}/.zfunctions" $fpath )
 
