@@ -42,3 +42,5 @@ fpath=( "${ZDOTDIR:-$HOME}/.zfunctions" $fpath )
 
 autoload -U promptinit; promptinit
 prompt spaceship
+
+export SPACESHIP_BATTERY_SHOW=false
