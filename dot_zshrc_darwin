@@ -1,13 +1,45 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
 # This file is managed by chezmoi.
-# Edit it with `chezmoi edit ~/.zshrc`
+# Edit it with `chezmoi edit ~/.zshrc_darwin`
 # To apply, run `chezmoi apply -v` after saving the file.
 
+#History 
+HISTFILE=~/.zsh_history
+HISTSIZE=SAVEHIST=10000
+setopt sharehistory
+setopt extendedhistory
 
 
+# Alias vim to neovim
+if type nvim > /dev/null 2>&1; then
+  alias vim='nvim'
+fi
 
+#Alias git to hub
+if type hub > /dev/null 2>&1; then
+  eval "$(hub alias -s)"
+fi
 
+alias ls='ls -G'
+alias ll='ls -lah'
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
+# Brew and Whalebrew for Mac
+export WHALEBREW_INSTALL_PATH=~/.whalebrew/bin/
+export WHALEBREW_CONFIG_DIR=~/.whalebrew/
+export PATH=${PATH}:${WHALEBREW_INSTALL_PATH}
+export PATH=/opt/homebrew/opt/grep/libexec/gnubin:$PATH
+
+export PATH=~/bin:$PATH
+export PATH=~/.local/bin:$PATH
+
+alias nano='/opt/homebrew/bin/nano'
+
+eval "$(pyenv init -)"
+
+export PATH=/opt/puppetlabs/bolt/bin:$PATH
+
+export CLOUDSDK_PYTHON_SITEPACKAGES=1
+
+# 1password ssh agent
+export SSH_AUTH_SOCK=~/.1password/agent.sock
+
+eval "$(starship init zsh)"
