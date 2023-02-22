@@ -42,4 +42,6 @@ export CLOUDSDK_PYTHON_SITEPACKAGES=1
 # 1password ssh agent
 export SSH_AUTH_SOCK=~/.1password/agent.sock
 
+source /Users/cpritchett/.config/op/plugins.sh
+
 eval "$(starship init zsh)"
