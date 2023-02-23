@@ -7,7 +7,15 @@
 # Please adapt and uncomment the following lines:
 	name = Chad Pritchett
 	email = chad@chadpritchett.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN0Lsz4e/C4miz+DhZG5Pp4gdOVeUL2VdAjOVGmsGT9v
 [core]
 	editor = vim
 [color]
 	ui = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
+
