@@ -2,7 +2,6 @@
 # Edit it with `chezmoi edit ${ZDOTDIR}/.zshrc`
 # To apply, run `chezmoi apply -v` after saving the file.
 
-{{ if eq .chezmoi.os "linux" -}}
 #zstyle ':zim:zmodule' use 'degit'
 
 ZIM_HOME=$HOME/.cache/.zim
@@ -54,4 +53,15 @@ export PATH=/opt/puppetlabs/bolt/bin:$PATH
 
 export PATH=~/bin:$PATH
 export PATH=~/.local/bin:$PATH
+
+{{ if eq .chezmoi.os "darwin" -}}
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Brew and Whalebrew for Mac
+export WHALEBREW_INSTALL_PATH=~/.whalebrew/bin/
+export WHALEBREW_CONFIG_DIR=~/.whalebrew/
+export PATH=${PATH}:${WHALEBREW_INSTALL_PATH}
+export PATH=${HOMEBREW_PREFIX}/opt/grep/libexec/gnubin:$PATH
 {{ end -}}
+
+source /Users/cpritchett/.config/op/plugins.sh
