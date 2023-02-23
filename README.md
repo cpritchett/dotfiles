@@ -1,6 +1,8 @@
-These are my dotfiles.  They are highly specific to my config, not terribly well documented, and at times may be broken. 
+Dotfiles managed with Chezmoi
 
-That being said, feel free to use them for inspiration. 
+* Cross platform -- MacOS, Linux, Windows with WSL2
+* Editors -- neovim, nano
+* Shell -- zsh (zim plugin manager, spaceship prompt), bash
 
 ## Install Chezmoi
 

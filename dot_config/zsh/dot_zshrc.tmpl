@@ -1,6 +1,25 @@
 # This file is managed by chezmoi.
-# Edit it with `chezmoi edit ~/.zshrc`
+# Edit it with `chezmoi edit ${ZDOTDIR}/.zshrc`
 # To apply, run `chezmoi apply -v` after saving the file.
+
+{{ if eq .chezmoi.os "linux" -}}
+#zstyle ':zim:zmodule' use 'degit'
+
+ZIM_HOME=$HOME/.cache/.zim
+
+# Download zimfw plugin manager if missing.
+if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
+  curl -fsSL --create-dirs -o ${ZIM_HOME}/zimfw.zsh \
+      https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
+fi
+
+# Install missing modules, and update ${ZIM_HOME}/init.zsh if missing or outdated.
+if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
+  source ${ZIM_HOME}/zimfw.zsh init -q
+fi
+
+# Initialize modules.
+source ${ZIM_HOME}/init.zsh
 
 #History 
 HISTFILE=~/.zsh_history
@@ -21,16 +40,13 @@ fi
 alias ls='ls -G'
 alias ll='ls -lah'
 
-
 # Python 
 eval "$(pyenv init -)"
 
-export EDITOR=vim
-export VISUAL="code --wait"
+export EDITOR=nvim
 
 # 1password ssh agent
 export SSH_AUTH_SOCK=~/.1password/agent.sock
-
 
 export CLOUDSDK_PYTHON_SITEPACKAGES=1
 
@@ -38,10 +54,4 @@ export PATH=/opt/puppetlabs/bolt/bin:$PATH
 
 export PATH=~/bin:$PATH
 export PATH=~/.local/bin:$PATH
-
-fpath=( "${ZDOTDIR:-$HOME}/.zfunctions" $fpath )
-
-autoload -U promptinit; promptinit
-prompt spaceship
-
-export SPACESHIP_BATTERY_SHOW=false
+{{ end -}}

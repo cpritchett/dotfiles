@@ -1,0 +1,7 @@
+zmodule joke/zim-starship
+zmodule zsh-users/zsh-completions --fpath src
+zmodule completion
+zmodule zsh-users/zsh-syntax-highlighting
+zmodule zsh-users/zsh-autosuggestions
+zmodule joke/zim-chezmoi
+zmodule joke/zim-github-cli

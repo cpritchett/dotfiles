@@ -1,0 +1,5 @@
+# This file is managed by chezmoi.
+# Edit it with `chezmoi edit $ZDOTDIR/.zshenv`
+# To apply, run `chezmoi apply -v` after saving the file.
+
+export XDG_CACHE_HOME=$HOME/.cache
