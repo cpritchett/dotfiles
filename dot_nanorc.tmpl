@@ -14,5 +14,5 @@ set functioncolor cyan
 set numbercolor yellow
 set mouse
 {{ if eq .chezmoi.os "darwin" }}
-include /opt/homebrew/Cellar/nanorc/*/share/nanorc/*.nanorc
+include ${HOMEBREW_CELLAR}/nanorc/*/share/nanorc/*.nanorc
 {{ end }}
