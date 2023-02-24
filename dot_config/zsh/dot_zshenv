@@ -3,3 +3,6 @@
 # To apply, run `chezmoi apply -v` after saving the file.
 
 export XDG_CACHE_HOME=$HOME/.cache
+
+# Needs to be templated for Intel Mac
+#export HOMEBREW_CELLAR=/usr/local/Cellar
