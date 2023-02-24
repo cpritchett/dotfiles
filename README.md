@@ -15,3 +15,4 @@ On Linux (with Snap):
 On Mac (with homebrew)
 `brew install chezmoi`
 
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/cpritchett/dotfiles/master/install.sh)"`
