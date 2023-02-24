@@ -55,7 +55,7 @@ export PATH=~/bin:$PATH
 export PATH=~/.local/bin:$PATH
 
 {{ if eq .chezmoi.os "darwin" -}}
-eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
 
 # Brew and Whalebrew for Mac
 export WHALEBREW_INSTALL_PATH=~/.whalebrew/bin/
