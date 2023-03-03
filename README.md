@@ -1,3 +1,5 @@
+![example event parameter](https://github.com/cpritchett/dotfiles/actions/workflows/ci.yml/badge.svg)
+
 Dotfiles managed with Chezmoi
 
 * Cross platform -- MacOS, Linux, Windows with WSL2
