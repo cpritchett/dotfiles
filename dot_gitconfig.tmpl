@@ -20,6 +20,9 @@
 {{ else if eq .chezmoi.os "linux" }}
 	program = /opt/1Password/op-ssh-sign
 {{ end }}
-
 [commit]
 	gpgsign = true
+[include]
+        path = ~/.gitconfig-local
+[includeIf "gitdir:~/src/work/"]
+        path = ~/.gitconfig-work
