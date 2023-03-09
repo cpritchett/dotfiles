@@ -3,3 +3,24 @@ install.sh
 LICENSE
 README.md
 **/*.src.ini
+
+.Trash-*
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.appl.timemachine.donotpresent
+*.lnk
+
+{{ if ne .chezmoi.os "darwin" }}
+Library/Application Support/PrusaSlicer/
+{{ end }}
+{{ if ne .chezmoi.os "linux" }}
+.config/PrusaSlicer/
+{{ end }}
