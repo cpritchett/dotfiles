@@ -66,6 +66,9 @@ export PATH=${HOMEBREW_PREFIX}/opt/grep/libexec/gnubin:$PATH
 alias nano='${HOMEBREW_PREFIX}/bin/nano'
 {{ end -}}
 
+# Source all files in $ZDOTDIR/aliases/
+source $ZDOTDIR/aliases/*
+
 source $XDG_CONFIG_HOME/op/plugins.sh
 
 {{ if eq .chezmoi.os "darwin" -}}
