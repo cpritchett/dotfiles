@@ -87,6 +87,7 @@ cask "ytmdesktop-youtube-music"
 cask "yubico-yubikey-manager"
 cask "yubico-yubikey-personalization-gui"
 cask "yubico-yubikey-piv-manager"
+cask "insomnia"
 mas "1Password for Safari", id: 1569813296
 mas "Amphetamine", id: 937984704
 mas "Battery Health 2", id: 1120214373
