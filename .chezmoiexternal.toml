@@ -1,15 +1,15 @@
-[".cache/tmux"]
+[".local/share/tmux"]
     type = "git-repo"
     url = "https://github.com/gpakosz/.tmux.git"
     refreshPeriod = "168h"
-    [".cache/tmux".pull]
+    [".local/share/tmux".pull]
         args = ["--ff-only"]
 
-#[".config/nvim"]
-#    type = "git-repo"
-#    url = "https://github.com/hardhackerlabs/oh-my-nvim.git"
-#    refreshPeriod = "168h"
-#    [".config/nvim".pull]
-#        args = ["--ff-only"]
+[".config/nvim"]
+    type = "git-repo"
+    url = "https://github.com/hardhackerlabs/oh-my-nvim.git"
+    refreshPeriod = "168h"
+    [".config/nvim".pull]
+        args = ["--ff-only"]
 
 
