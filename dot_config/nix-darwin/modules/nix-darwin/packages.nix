@@ -7,6 +7,7 @@
     gnused
     neovim
     ripgrep
+    tmux
   ];
 
   # User
@@ -18,6 +19,8 @@
     zoxide
     tealdeer
     fclones
+    exa
+    starship
   ];
 
   # Homebrew
