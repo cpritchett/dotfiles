@@ -103,44 +103,6 @@ mas "TrashMe 3", id: 1490879410
 EOF
 {{ end -}}
 
-{{- if (eq .location "work") -}}
-#!/bin/bash
-
-brew bundle --no-lock --file=/dev/stdin <<EOF
-tap "1password/tap"
-tap "hashicorp/tap"
-tap "homebrew/autoupdate"
-tap "homebrew/bundle"
-tap "homebrew/cask-drivers"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
-tap "keys-pub/tap"
-brew "keys-pub/tap/keys"
-cask "1password"
-cask "1password-cli"
-cask "aerial"
-cask "alfred"
-cask "bartender"
-cask "firefox"
-cask "font-fira-code-nerd-font"
-cask "iterm2"
-cask "keys"
-cask "logitech-options"
-cask "trunk-io"
-cask "visual-studio-code"
-cask "ytmdesktop-youtube-music"
-cask "yubico-yubikey-manager"
-cask "yubico-yubikey-personalization-gui"
-cask "yubico-yubikey-piv-manager"
-cask "insomnia"
-mas "1Password for Safari", id: 1569813296
-mas "Amphetamine", id: 937984704
-mas "Battery Health 2", id: 1120214373
-mas "Magnet", id: 441258766
-mas "Meeter", id: 1510445899
-mas "Pocket", id: 568494494
-mas "Save to Pocket", id: 1477385213
-mas "TrashMe 3", id: 1490879410
 
 EOF
 {{ end -}}
