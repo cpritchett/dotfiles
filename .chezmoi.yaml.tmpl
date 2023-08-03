@@ -8,7 +8,7 @@
 {{-   $name = .name -}}
 {{- /* Otherwise, if running interactively, prompts for a name */ -}}
 {{- else if $interactive -}}
-{{-   $name = promptString "name" $name -}}
+{{-   $name = promptString "What is your name?" $name -}}
 {{- end -}}
 
 {{- /* Does the same for the email */ -}}
@@ -16,7 +16,15 @@
 {{- if hasKey . "email" -}}
 {{-   $email = .email -}}
 {{- else if $interactive -}}
-{{-   $email = promptString "email" $email -}}
+{{-   $email = promptString "What is your email?" $email -}}
+{{- end -}}
+
+{{- /* Does the same for the location */ -}}
+{{- $location := "work" -}}
+{{- if hasKey . "location" -}}
+{{-   $location = .location -}}
+{{- else if $interactive -}}
+{{-   $location = promptString "Is this a work machine?" $location -}}
 {{- end -}}
 
 {{- if $interactive -}}
@@ -28,6 +36,7 @@ sourceDir: "{{ .chezmoi.sourceDir }}"
 data:
   name: "{{ $name }}"
   email: "{{ $email }}"
+  location: "{{ $location }}"
 
 git:
   autoCommit: true
