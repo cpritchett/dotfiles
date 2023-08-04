@@ -63,7 +63,7 @@
     # NOTE: Casks are prefered because of weird placement of GUI Apps by Nix / Nix Darwin
     casks = [
       "alfred"
-      #"microsoft-edge" 
+      "microsoft-edge" 
       "visual-studio-code"
       "logi-options-plus"
       "1password"
