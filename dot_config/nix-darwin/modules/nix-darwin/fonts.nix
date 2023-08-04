@@ -9,7 +9,7 @@
           "DroidSansMono"
           "Mononoki"
           "FiraCode"
-          "fira-code-symbols"
+          #"fira-code-symbols"
           "FantasqueSansMono"
         ];
       })
