@@ -3,7 +3,8 @@ install.sh
 LICENSE
 README.md
 **/*.src.ini
-
+bootstrap
+wip
 .Trash-*
 .DS_Store
 .AppleDouble
