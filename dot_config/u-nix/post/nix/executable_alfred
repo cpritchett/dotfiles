@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+
+if [[ ! -d "$HOME"/code/private ]]; then 
+    echo "$HOME/code/private does not exist."
+    exit 1
+fi 
+
+for file in "$HOME"/code/private/alfred/*; do
+    folder_name=$(basename -s .plist "$file")
+    if [[ ! -L "$HOME"/Library/"Application Support"/Alfred/Alfred.alfredpreferences/workflows/"$folder_name"/info.plist ]]; then
+        [[ -f "$HOME"/Library/"Application Support"/Alfred/Alfred.alfredpreferences/workflows/"$folder_name"/info.plist ]] && rm "$HOME"/Library/"Application Support"/Alfred/Alfred.alfredpreferences/workflows/"$folder_name"/info.plist
+        printf "linking '%s' to '%s/Library/Application Support/Alfred/Alfred.alfredpreferences/workflows/%s/info.plist'\n" "$file" "$HOME" "$folder_name"
+        ln -s "$file" "$HOME"/Library/"Application Support"/Alfred/Alfred.alfredpreferences/workflows/"$folder_name"/info.plist
+    fi
+done
