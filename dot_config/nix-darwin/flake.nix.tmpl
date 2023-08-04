@@ -64,7 +64,7 @@
             useUserPackages = true;
             users."${nix-vars.username}" = { nix-vars, pkgs, ... }: {
               imports = [
-                # ./modules/home-manager/defaults.nix
+                ./modules/home-manager/defaults.nix
                 # ./modules/home-manager/zsh.nix
               ];
             };
