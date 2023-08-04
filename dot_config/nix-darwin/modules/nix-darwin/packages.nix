@@ -73,9 +73,6 @@
       "keys"
       "trunk-io"
       "ytmdesktop-youtube-music"
-      "yubico-yubikey-manager"
-      "yubico-yubikey-personalization-gui"
-      "yubico-yubikey-piv-manager"
       "insomnia"
     ];
 
@@ -84,6 +81,7 @@
       "openssl" "readline" "sqlite3" "xz" "zlib" "tcl-tk" # Python Build Dependencies
       "asdf"
       "keys-pub/tap/keys"
+      "ykman"
     ];
 
   };
