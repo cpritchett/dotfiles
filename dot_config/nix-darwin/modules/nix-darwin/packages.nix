@@ -45,7 +45,6 @@
       "homebrew/command-not-found"
       "1password/tap"
       "hashicorp/tap"
-      "homebrew/cask-drivers"
       "keys-pub/tap"
 
     ];
