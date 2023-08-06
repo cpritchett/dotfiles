@@ -1,0 +1,6 @@
+[".local/share/microsoft-edge/themes/dracula"]
+    type = "git-repo"
+    url = "https://github.com/dracula/microsoft-edge.git"
+    refreshPeriod = "168h"
+    [".local/share/microsoft-edge/themes/dracula".pull]
+        args = ["--ff-only"]
