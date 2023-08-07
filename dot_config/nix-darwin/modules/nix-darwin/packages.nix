@@ -61,20 +61,20 @@
     };
 
     # NOTE: Casks are prefered because of weird placement of GUI Apps by Nix / Nix Darwin
-    casks = {
-      "alfred"; 
-      "visual-studio-code";
-      "logi-options-plus";
-      "1password";
-      "1password-cli";
-      "aerial";
-      "bartender";
-      "iterm2";
-      "keys";
-      "trunk-io";
-      "ytmdesktop-youtube-music";
-      "insomnia"
-    };
+    casks = [
+      "alfred", 
+      "visual-studio-code",
+      "logi-options-plus",
+      "1password",
+      "1password-cli",
+      "aerial",
+      "bartender",
+      "iterm2",
+      "keys",
+      "trunk-io",
+      "ytmdesktop-youtube-music",
+      "insomnia",
+    ];
 
     brews = [
       "php" # For 2fm alfred plugin 
