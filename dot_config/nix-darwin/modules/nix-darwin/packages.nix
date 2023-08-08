@@ -62,18 +62,18 @@
 
     # NOTE: Casks are prefered because of weird placement of GUI Apps by Nix / Nix Darwin
     casks = [
-      { name = "alfred";}  
-      { name = "visual-studio-code";}
-      { name = "logi-options-plus";}
-      { name = "1password";}
-      { name = "1password-cli";}
-      { name = "aerial";}
-      { name = "bartender";}
-      { name = "iterm2";}
-      { name = "keys";}
-      { name = "trunk-io";}
-      { name = "ytmdesktop-youtube-music";}
-      { name = "insomnia";}
+      alfred
+      visual-studio-code
+      logi-options-plus
+      1password
+      1password-cli
+      aerial
+      bartender
+      iterm2
+      keys
+      trunk-io
+      ytm-desktop-music
+      insomnia
     ];
 
     brews = [
