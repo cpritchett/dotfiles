@@ -74,6 +74,7 @@
       trunk-io
       ytm-desktop-music
       insomnia
+      docker
     ];
 
     brews = [
