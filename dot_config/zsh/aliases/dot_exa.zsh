@@ -6,8 +6,8 @@ if [ -x "$(command -v exa)" ]; then
     # general use
     alias ls='exa --group-directories-first'                                                          # ls
     alias l='exa -lbF --git --group-directories-first'                                                # list, size, type, git
-    alias ll='exa -lbGF --git --group-directories-first'                                             # long list
-    alias llm='exa -lbGd --git --sort=modified'                            # long list, modified date sort
+    alias ll='exa -lbhGF --git --group-directories-first'                                             # long list
+    alias llm='exa -lbhGd --git --sort=modified'                            # long list, modified date sort
     alias la='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale --group-directories-first'  # all list
     alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale --group-directories-first' # all + extended list
 
