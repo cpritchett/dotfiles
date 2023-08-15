@@ -20,6 +20,12 @@ fi
 # Initialize modules.
 source ${ZIM_HOME}/init.zsh
 
+
+{{ if eq .chezmoi.os "darwin" -}}
+eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
+
+{{ end -}}
+
 #History 
 HISTFILE=~/.zsh_history
 HISTSIZE=SAVEHIST=10000
@@ -58,9 +64,8 @@ export PATH=/opt/puppetlabs/bolt/bin:$PATH
 export PATH=~/bin:$PATH
 export PATH=~/.local/bin:$PATH
 
-{{ if eq .chezmoi.os "darwin" -}}
-eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
 
+{{ if eq .chezmoi.os "darwin" -}}
 # Brew and Whalebrew for Mac
 export WHALEBREW_INSTALL_PATH=~/.whalebrew/bin/
 export WHALEBREW_CONFIG_DIR=~/.whalebrew/
