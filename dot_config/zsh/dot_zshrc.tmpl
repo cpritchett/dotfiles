@@ -44,9 +44,9 @@ export EDITOR=vim
 
 # 1password ssh agent
 {{ if eq .chezmoi.os "darwin" }}
-  export SSH_AUTH_SOCK="~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+  export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 {{ else }}
-  export SSH_AUTH_SOCK="~/.1password/agent.sock"
+  export SSH_AUTH_SOCK=~/.1password/agent.sock
 {{ end }}
 
 export CLOUDSDK_PYTHON_SITEPACKAGES=1
