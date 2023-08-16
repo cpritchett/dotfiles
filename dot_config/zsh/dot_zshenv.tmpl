@@ -11,3 +11,8 @@ export HOMEBREW_CELLAR=/usr/local/Cellar
 # update for Apple Silicon
 export HOMEBREW_PREFIX=/opt/homebrew
 {{ end -}}
+
+{{ if eq .chezmoi.os "darwin" -}}
+eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
+{{ end -}}
+
