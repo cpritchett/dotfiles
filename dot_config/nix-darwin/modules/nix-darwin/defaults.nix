@@ -27,21 +27,24 @@
   system.defaults = {
     dock = {
       autohide = false;
+      autohide = false;
       minimize-to-application = true;
       mru-spaces = false;
       show-recents = true;
+      show-recents = true;
 
       # Hot Corners
-      #wvous-tl-corner = 2; # Mission Control
-      #wvous-tr-corner = 12; # Notification Center
-      #wvous-bl-corner = 14; # Quick Note
-      #wvous-br-corner = 4; # Desktop
+      # wvous-tl-corner = 2; # Mission Control
+      # wvous-tr-corner = 12; # Notification Center
+      # wvous-bl-corner = 14; # Quick Note
+      # wvous-br-corner = 4; # Desktop
     };
 
     finder = {
       AppleShowAllExtensions = false;
+      AppleShowAllExtensions = false;
       _FXShowPosixPathInTitle = true;
-      CreateDesktop = false;
+      CreateDesktop = true;
       FXDefaultSearchScope = "SCcf";
       FXEnableExtensionChangeWarning = false;
       FXPreferredViewStyle = "clmv";
@@ -88,11 +91,13 @@
     # };
 
     NSGlobalDomain = {
-      _HIHideMenuBar = true;
+      _HIHideMenuBar = false;
       "com.apple.swipescrolldirection" = true;
+      AppleICUForce24HourTime = false;
       AppleICUForce24HourTime = false;
       AppleInterfaceStyle = "Dark";
       AppleKeyboardUIMode = 3;
+      AppleShowAllExtensions = false;
       AppleShowAllExtensions = false;
       AppleShowAllFiles = true;
       AppleShowScrollBars = "WhenScrolling";
