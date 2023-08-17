@@ -21,7 +21,11 @@
     fclones
     exa
     starship
+<<<<<<< HEAD
     gh
+=======
+    pyenv
+>>>>>>> d200223 (Update .config/nix-darwin/modules/nix-darwin/packages.nix)
   ];
 
   # Homebrew
