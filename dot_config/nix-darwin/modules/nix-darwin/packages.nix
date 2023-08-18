@@ -75,7 +75,7 @@
       ytm-desktop-music
       insomnia
       docker
-      elegato-stream-deck
+      elgato-stream-deck
     ];
 
     brews = [
