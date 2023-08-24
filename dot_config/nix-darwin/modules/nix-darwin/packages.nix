@@ -73,7 +73,7 @@
       "iterm2"
       "keys"
       "trunk-io"
-      "ytm-desktop-music"
+      "ytmdesktop-youtube-music"
       "insomnia"
       "docker"
       "elgato-stream-deck"
