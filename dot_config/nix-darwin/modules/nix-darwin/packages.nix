@@ -76,6 +76,7 @@
       insomnia
       docker
       elgato-stream-deck
+      betterdisplay
     ];
 
     brews = [
