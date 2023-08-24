@@ -78,6 +78,7 @@
       "docker"
       "elgato-stream-deck"
       "betterdisplay"
+      "microsoft-edge"
     ];
 
     brews = [
