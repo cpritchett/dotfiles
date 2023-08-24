@@ -1,3 +1,7 @@
+# This file is managed by chezmoi.
+# Edit it with `chezmoi edit $ZDOTDIR/.iterm2_shell_integration.zsh`
+# To apply, run `chezmoi apply -v` after saving the file.
+
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
 # as published by the Free Software Foundation; either version 2
@@ -158,5 +162,3 @@ if [[ -o interactive ]]; then
     printf "\033]1337;ShellIntegrationVersion=14;shell=zsh\007"
   fi
 fi
-
-alias imgcat=/Users/chadpritchett/.config/zsh/.iterm2/imgcat;alias imgls=/Users/chadpritchett/.config/zsh/.iterm2/imgls;alias it2api=/Users/chadpritchett/.config/zsh/.iterm2/it2api;alias it2attention=/Users/chadpritchett/.config/zsh/.iterm2/it2attention;alias it2check=/Users/chadpritchett/.config/zsh/.iterm2/it2check;alias it2copy=/Users/chadpritchett/.config/zsh/.iterm2/it2copy;alias it2dl=/Users/chadpritchett/.config/zsh/.iterm2/it2dl;alias it2getvar=/Users/chadpritchett/.config/zsh/.iterm2/it2getvar;alias it2git=/Users/chadpritchett/.config/zsh/.iterm2/it2git;alias it2profile=/Users/chadpritchett/.config/zsh/.iterm2/it2profile;alias it2setcolor=/Users/chadpritchett/.config/zsh/.iterm2/it2setcolor;alias it2setkeylabel=/Users/chadpritchett/.config/zsh/.iterm2/it2setkeylabel;alias it2tip=/Users/chadpritchett/.config/zsh/.iterm2/it2tip;alias it2ul=/Users/chadpritchett/.config/zsh/.iterm2/it2ul;alias it2universion=/Users/chadpritchett/.config/zsh/.iterm2/it2universion

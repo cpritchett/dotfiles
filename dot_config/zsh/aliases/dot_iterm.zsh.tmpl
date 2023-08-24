@@ -1,0 +1,67 @@
+# This file is managed by chezmoi.
+# Edit it with `chezmoi edit $ZDOTDIR/aliases/.iterm.zsh`
+# To apply, run `chezmoi apply -v` after saving the file.
+
+{{ if eq .chezmoi.os "darwin" -}}
+
+f [[ -f "/Users/$USER/.config/zsh/.iterm2/imgcat" ]]; then
+  alias imgcat="/Users/$USER/.config/zsh/.iterm2/imgcat"
+fi
+
+if [[ -f "/Users/$USER/.config/zsh/.iterm2/imgls" ]]; then
+  alias imgls="/Users/$USER/.config/zsh/.iterm2/imgls"
+fi
+
+if [[ -f "/Users/$USER/.config/zsh/.iterm2/it2api" ]]; then
+  alias it2api="/Users/$USER/.config/zsh/.iterm2/it2api"
+fi
+
+if [[ -f "/Users/$USER/.config/zsh/.iterm2/it2attention" ]]; then
+  alias it2attention="/Users/$USER/.config/zsh/.iterm2/it2attention"
+fi
+
+if [[ -f "/Users/$USER/.config/zsh/.iterm2/it2check" ]]; then
+  alias it2check="/Users/$USER/.config/zsh/.iterm2/it2check"
+fi
+
+if [[ -f "/Users/$USER/.config/zsh/.iterm2/it2copy" ]]; then
+  alias it2copy="/Users/$USER/.config/zsh/.iterm2/it2copy"
+fi
+
+if [[ -f "/Users/$USER/.config/zsh/.iterm2/it2dl" ]]; then
+  alias it2dl="/Users/$USER/.config/zsh/.iterm2/it2dl"
+fi
+
+if [[ -f "/Users/$USER/.config/zsh/.iterm2/it2getvar" ]]; then
+  alias it2getvar="/Users/$USER/.config/zsh/.iterm2/it2getvar"
+fi
+
+if [[ -f "/Users/$USER/.config/zsh/.iterm2/it2git" ]]; then
+  alias it2git="/Users/$USER/.config/zsh/.iterm2/it2git"
+fi
+
+if [[ -f "/Users/$USER/.config/zsh/.iterm2/it2profile" ]]; then
+  alias it2profile="/Users/$USER/.config/zsh/.iterm2/it2profile"
+fi
+
+if [[ -f "/Users/$USER/.config/zsh/.iterm2/it2setcolor" ]]; then
+  alias it2setcolor="/Users/$USER/.config/zsh/.iterm2/it2setcolor"
+fi
+
+if [[ -f "/Users/$USER/.config/zsh/.iterm2/it2setkeylabel" ]]; then
+  alias it2setkeylabel="/Users/$USER/.config/zsh/.iterm2/it2setkeylabel"
+fi
+
+if [[ -f "/Users/$USER/.config/zsh/.iterm2/it2tip" ]]; then
+  alias it2tip="/Users/$USER/.config/zsh/.iterm2/it2tip"
+fi
+
+if [[ -f "/Users/$USER/.config/zsh/.iterm2/it2ul" ]]; then
+  alias it2ul="/Users/$USER/.config/zsh/.iterm2/it2ul"
+fi
+
+if [[ -f "/Users/$USER/.config/zsh/.iterm2/it2universion" ]]; then
+  alias it2universion="/Users/$USER/.config/zsh/.iterm2/it2universion"
+fi
+
+{{ end -}}
