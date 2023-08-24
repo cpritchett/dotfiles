@@ -63,21 +63,21 @@
 
     # NOTE: Casks are prefered because of weird placement of GUI Apps by Nix / Nix Darwin
     casks = [
-      alfred
-      visual-studio-code
-      logi-options-plus
-      1password
-      1password-cli
-      aerial
-      bartender
-      iterm2
-      keys
-      trunk-io
-      ytm-desktop-music
-      insomnia
-      docker
-      elgato-stream-deck
-      betterdisplay
+      "alfred"
+      "visual-studio-code"
+      "logi-options-plus"
+      "1password"
+      "1password-cli"
+      "aerial"
+      "bartender"
+      "iterm2"
+      "keys"
+      "trunk-io"
+      "ytm-desktop-music"
+      "insomnia"
+      "docker"
+      "elgato-stream-deck"
+      "betterdisplay"
     ];
 
     brews = [
