@@ -21,6 +21,7 @@
     fclones
     exa
     starship
+    gh
   ];
 
   # Homebrew

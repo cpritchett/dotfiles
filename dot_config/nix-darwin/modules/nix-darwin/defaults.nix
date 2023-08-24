@@ -26,20 +26,20 @@
   # macOS Defaults
   system.defaults = {
     dock = {
-      autohide = true;
+      autohide = false;
       minimize-to-application = true;
       mru-spaces = false;
-      show-recents = false;
+      show-recents = true;
 
       # Hot Corners
-      wvous-tl-corner = 2; # Mission Control
-      wvous-tr-corner = 12; # Notification Center
-      wvous-bl-corner = 14; # Quick Note
-      wvous-br-corner = 4; # Desktop
+      #wvous-tl-corner = 2; # Mission Control
+      #wvous-tr-corner = 12; # Notification Center
+      #wvous-bl-corner = 14; # Quick Note
+      #wvous-br-corner = 4; # Desktop
     };
 
     finder = {
-      AppleShowAllExtensions = true;
+      AppleShowAllExtensions = false;
       _FXShowPosixPathInTitle = true;
       CreateDesktop = false;
       FXDefaultSearchScope = "SCcf";
@@ -52,7 +52,7 @@
     ".GlobalPreferences"."com.apple.sound.beep.sound" = "/System/Library/Sounds/hero";
 
     screencapture = {
-      disable-shadow = true;
+      disable-shadow = false;
       location = "~/Documents/Screenshots";
     };
 
@@ -90,10 +90,10 @@
     NSGlobalDomain = {
       _HIHideMenuBar = true;
       "com.apple.swipescrolldirection" = true;
-      AppleICUForce24HourTime = true;
+      AppleICUForce24HourTime = false;
       AppleInterfaceStyle = "Dark";
       AppleKeyboardUIMode = 3;
-      AppleShowAllExtensions = true;
+      AppleShowAllExtensions = false;
       AppleShowAllFiles = true;
       AppleShowScrollBars = "WhenScrolling";
       NSNavPanelExpandedStateForSaveMode = true;
