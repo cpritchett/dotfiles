@@ -8,6 +8,7 @@
     neovim
     ripgrep
     tmux
+    unzip
   ];
 
   # User
@@ -26,6 +27,7 @@
 =======
     pyenv
 >>>>>>> d200223 (Update .config/nix-darwin/modules/nix-darwin/packages.nix)
+    pyenv
   ];
 
   # Homebrew
