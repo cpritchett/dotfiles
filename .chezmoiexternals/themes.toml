@@ -4,3 +4,11 @@
     refreshPeriod = "168h"
     [".local/share/microsoft-edge/themes/dracula".pull]
         args = ["--ff-only"]
+
+[".local/share/exa/themes/dracula"]
+    type = "git-repo"
+    url = "https://github.com/dracula/exa.git"
+    refreshPeriod = "168h"
+    [".local/share/exa/themes/dracula".pull]
+        args = ["--ff-only"]
+
