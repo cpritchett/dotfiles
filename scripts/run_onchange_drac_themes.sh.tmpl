@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# drac_themes.zip hash: include {{ .chezmoi.homeDir }}/.local/share/themes/drac_themes.zip | sha256sum
+
+# Check to see if ~/.local/share/themes/dracpro exists, and then delete it if it does
+if [[ -d ~/.local/share/themes/dracpro ]]; then
+    rm -rf ~/.local/share/themes/dracpro
+fi
+
+unzip -q -o ~/.local/share/themes/drac_themes.zip -d ~/.local/share/themes/
