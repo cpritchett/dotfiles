@@ -7,4 +7,12 @@ if [[ -d ~/.local/share/themes/dracpro ]]; then
     rm -rf ~/.local/share/themes/dracpro
 fi
 
-unzip -q -o ~/.local/share/themes/drac_themes.zip -d ~/.local/share/themes/
+unzip -q -o ~/.local/share/themes/drac_themes.zip -d ~/.local/share/themes/nf/
+
+# make insomnia links
+# check to see if ~/Library/Application\ Support/Insomnia/plugins/dracula-pro exists and unlink it if it does
+if [[ -d ~/Library/Application\ Support/Insomnia/plugins/dracula-pro ]]; then
+    unlink ~/Library/Application\ Support/Insomnia/plugins/dracula-pro
+fi
+
+ln -s ~/.local/share/themes/nf/drac_themes/dracpro/themes/insomnia ~/Library/Application\ Support/Insomnia/plugins/dracula-pro
