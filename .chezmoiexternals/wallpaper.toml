@@ -1,0 +1,7 @@
+[".local/share/wallpaper/dracula"]
+    type = "git-repo"
+    url = "https://github.com/dracula/wallpaper.git"
+    refreshPeriod = "168h"
+    [".local/share/wallpaper/dracula".pull]
+        args = ["--ff-only"]
+        

@@ -11,4 +11,3 @@
     refreshPeriod = "168h"
     [".local/share/exa/themes/dracula".pull]
         args = ["--ff-only"]
-

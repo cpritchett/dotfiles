@@ -27,10 +27,8 @@
   system.defaults = {
     dock = {
       autohide = false;
-      autohide = false;
       minimize-to-application = true;
       mru-spaces = false;
-      show-recents = true;
       show-recents = true;
 
       # Hot Corners
@@ -41,7 +39,6 @@
     };
 
     finder = {
-      AppleShowAllExtensions = false;
       AppleShowAllExtensions = false;
       _FXShowPosixPathInTitle = true;
       CreateDesktop = true;
@@ -94,10 +91,8 @@
       _HIHideMenuBar = false;
       "com.apple.swipescrolldirection" = true;
       AppleICUForce24HourTime = false;
-      AppleICUForce24HourTime = false;
       AppleInterfaceStyle = "Dark";
       AppleKeyboardUIMode = 3;
-      AppleShowAllExtensions = false;
       AppleShowAllExtensions = false;
       AppleShowAllFiles = true;
       AppleShowScrollBars = "WhenScrolling";
