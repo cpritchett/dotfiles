@@ -9,20 +9,22 @@
     ripgrep
     tmux
     unzip
+    nano
+    exa
+    jq
   ];
 
   # User
   users.users."${nix-vars.username}".packages = with pkgs; [
-    jq
     pueue
     notify
     nixpkgs-fmt
     zoxide
     tealdeer
     fclones
-    exa
     starship
     pyenv
+    neofetch
   ];
 
   # Homebrew
@@ -88,6 +90,7 @@
       "asdf"
       "keys-pub/tap/keys"
       "ykman"
+      "reattach-to-user-namespace"
     ];
 
   };
