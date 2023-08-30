@@ -83,6 +83,11 @@ source $XDG_CONFIG_HOME/op/plugins.sh
 # exa
 source $HOME/.local/share/exa/themes/dracula/exa_colors.zshrc
 
+if [ -z "$TMUX" ] && [ -n "$SSH_TTY" ] && [[ $- =~ i ]]; then
+    tmux attach-session -t ssh || tmux new-session -s ssh
+    exit
+fi
+
 # This may be more trouble than it's worth
 #{{ if eq .chezmoi.os "darwin" -}}
 #source $ZDOTDIR/.iterm2_shell_integration.zsh
