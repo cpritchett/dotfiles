@@ -1,12 +1,12 @@
 #!/usr/bin/env zsh
 
 # SSH
-if [[ ! -d "$HOME"/.ssh || ! -d "$HOME"/code/private/ssh ]]; then
-    printf "~/.ssh or ~/code/private/ssh do not exist. Exiting...\n"
+if [[ ! -d "$HOME"/.ssh || ! -d "$HOME"/.cache/src/personal/private/ssh ]]; then
+    printf "~/.ssh or ~/.cache/src/personal/private/ssh do not exist. Exiting...\n"
     exit 1
 fi 
 
-rsync -av ~/code/private/ssh/ ~/.ssh/
+rsync -av ~/.cache/src/personal/private/ssh/ ~/.ssh/
 chmod -R u=rx,g=,o= ~/.ssh/public
 chmod -R u=rx,g=,o= ~/.ssh/private
 chmod u=rx,g=,o= ~/.ssh/config

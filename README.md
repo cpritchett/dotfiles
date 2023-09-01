@@ -1,20 +1,12 @@
-![example event parameter](https://github.com/cpritchett/dotfiles/actions/workflows/ci.yml/badge.svg)
 
-Dotfiles managed with Chezmoi
+# Currently Undergoing a Rebuild with Nix
+![Broken](https://img.shields.io/badge/status-broken-red)
+
+
+Dotfiles managed with Chezmoi and Nix
+
 
 * Cross platform -- MacOS, Linux, Windows with WSL2
-* Editors -- neovim, nano
-* Shell -- zsh (zim plugin manager, spaceship prompt), bash
-
-## Install Chezmoi
-
-On Linux (no snap, with one command):
-`sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply $GITHUB_USERNAME`
-
-On Linux (with Snap):
-`snap install chezmoi --classic`
-
-On Mac (with homebrew)
-`brew install chezmoi`
-
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/cpritchett/dotfiles/master/install.sh)"`
+* Container support -- VScode devcontainers, Github codespaces
+* Editors -- vscode, neovim, nano
+* Shell -- zsh (zim plugin manager, spaceship prompt), bash, tmux
