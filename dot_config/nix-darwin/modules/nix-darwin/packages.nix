@@ -82,6 +82,8 @@
       "elgato-stream-deck"
       "betterdisplay"
       "microsoft-edge"
+      "yubico-yubikey-manager"
+      "betterdiscord-installer"
     ];
 
     brews = [
