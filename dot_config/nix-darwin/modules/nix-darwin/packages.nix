@@ -10,8 +10,6 @@
     tmux
     unzip
     nano
-    exa
-    jq
   ];
 
   # User
@@ -25,6 +23,9 @@
     starship
     pyenv
     neofetch
+    fzf
+    eza
+    jq
   ];
 
   # Homebrew
@@ -50,7 +51,7 @@
       "1password/tap"
       "hashicorp/tap"
       "keys-pub/tap"
-
+      "dracula/install"
     ];
 
     masApps = {
@@ -83,11 +84,13 @@
       "betterdisplay"
       "microsoft-edge"
       "yubico-yubikey-manager"
+      "discord"
       "betterdiscord-installer"
+      "protonvpn"
+      "dracula-betterdiscord"
     ];
 
     brews = [
-      "php" # For 2fm alfred plugin 
       "openssl" "readline" "sqlite3" "xz" "zlib" "tcl-tk" # Python Build Dependencies
       "asdf"
       "keys-pub/tap/keys"

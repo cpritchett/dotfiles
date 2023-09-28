@@ -1,10 +1,3 @@
-
-["Library/Application Support/Alfred/Alfred.alfredpreferences/workflows/2fa"]
-    type = "archive"
-    url = "https://github.com/squatto/alfred-imessage-2fa/releases/download/v1.2.8/iMessage.2FA.alfredworkflow#2fa-alfred.zip"
-    extract = true
-    exclude = ["info.plist"]
-
 ["Library/Application Support/Alfred/Alfred.alfredpreferences/workflows/paste-plain"]
     type = "archive"
     url = "https://github.com/alfredapp/paste-as-plain-text-from-hotkey-workflow/releases/download/2022.2/Paste.as.Plain.Text.from.Hotkey.alfredworkflow#Paste.as.Plain.Text.from.Hotkey.zip"
