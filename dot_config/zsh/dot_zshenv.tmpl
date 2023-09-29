@@ -4,6 +4,9 @@
 
 export XDG_CACHE_HOME=$HOME/.cache
 
+source $HOME/.nix-profile/etc/profile.d/nix.sh
+
+
 {{ if (and (eq .chezmoi.os "darwin") (eq .chezmoi.arch "amd64")) -}}
 export HOMEBREW_PREFIX=/usr/local
 export HOMEBREW_CELLAR=/usr/local/Cellar

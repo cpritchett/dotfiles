@@ -25,4 +25,6 @@ Library/Application Support/PrusaSlicer/
 {{ end }}
 {{ if ne .chezmoi.os "linux" }}
 .config/PrusaSlicer/
+.config/nix-darwin/
+.config/iterm2/
 {{ end }}

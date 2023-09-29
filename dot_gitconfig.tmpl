@@ -19,8 +19,12 @@
 [gpg "ssh"]
 {{ if eq .chezmoi.os "darwin" }}
 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
-{{ else if eq .chezmoi.os "linux" }}
-	program = /opt/1Password/op-ssh-sign
+  {{  else if eq .chezmoi.os "linux" }} 
+     {{ if ( .chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+        allowedSignersFile = ~/.ssh/allowed_signers
+       {{ else }}
+	program = /opt/1Password/opt-ssh-sign
+      {{ end }}
 {{ end }}
 [commit]
 	gpgsign = true
