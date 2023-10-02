@@ -81,8 +81,9 @@ source $XDG_CONFIG_HOME/op/plugins.sh
 
 # colors
 # exa
-source $HOME/.local/share/exa/themes/dracula/exa_colors.zshrc
-
+[[ -f $HOME/.local/share/exa/themes/dracula/exa_colors.zshrc ]]
+  source $HOME/.local/share/exa/themes/dracula/exa_colors.zshrc
+fi
 
 # This may be more trouble than it's worth
 #{{ if eq .chezmoi.os "darwin" -}}
