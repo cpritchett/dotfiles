@@ -75,7 +75,9 @@ alias nano='${HOMEBREW_PREFIX}/bin/nano'
 {{ end -}}
 
 # Source all files in $ZDOTDIR/aliases/
-source $ZDOTDIR/aliases/*(D)
+for file in $ZDOTDIR/aliases/*.zsh; do
+    source "$file"
+done
 
 source $XDG_CONFIG_HOME/op/plugins.sh
 
@@ -89,3 +91,6 @@ fi
 #{{ if eq .chezmoi.os "darwin" -}}
 #source $ZDOTDIR/.iterm2_shell_integration.zsh
 #{{ end -}}
+for file in /path/to/directory/*.zsh; do
+    source "$file"
+done
