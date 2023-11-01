@@ -11,3 +11,10 @@
     refreshPeriod = "168h"
     [".local/share/exa/themes/dracula".pull]
         args = ["--ff-only"]
+
+[".local/share/bbedit/themes/dracula"]
+    type = "git-repo"
+    url = "https://github.com/dracula/bbedit.git"
+    refreshPeriod = "168h"
+    [".local/share/bbedit/themes/dracula".pull]
+        args = ["--ff-only"]

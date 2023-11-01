@@ -10,6 +10,7 @@
     tmux
     unzip
     nano
+    gitFull
   ];
 
   # User
