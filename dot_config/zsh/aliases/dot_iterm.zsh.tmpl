@@ -4,7 +4,7 @@
 
 {{ if eq .chezmoi.os "darwin" -}}
 
-f [[ -f "/Users/$USER/.config/zsh/.iterm2/imgcat" ]]; then
+if [[ -f "/Users/$USER/.config/zsh/.iterm2/imgcat" ]]; then
   alias imgcat="/Users/$USER/.config/zsh/.iterm2/imgcat"
 fi
 
