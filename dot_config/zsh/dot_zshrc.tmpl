@@ -75,9 +75,9 @@ alias nano='${HOMEBREW_PREFIX}/bin/nano'
 {{ end -}}
 
 # Source all files in $ZDOTDIR/aliases/
-#for file in $ZDOTDIR/aliases/**/*(-.D); do
-#    source $file
-#done
+for file in $ZDOTDIR/aliases/**/*(-.D); do
+    source $file
+done
 
 
 source $XDG_CONFIG_HOME/op/plugins.sh
