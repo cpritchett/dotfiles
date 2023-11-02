@@ -75,7 +75,7 @@ alias nano='${HOMEBREW_PREFIX}/bin/nano'
 {{ end -}}
 
 # Source all files in $ZDOTDIR/aliases/
-for file in $ZDOTDIR/aliases/**/*(-.); do
+for file in $ZDOTDIR/aliases/**/*(-.)(D); do
     source $file
 done
 
