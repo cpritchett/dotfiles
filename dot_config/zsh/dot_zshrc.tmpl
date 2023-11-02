@@ -74,10 +74,8 @@ export PATH=${HOMEBREW_PREFIX}/opt/grep/libexec/gnubin:$PATH
 alias nano='${HOMEBREW_PREFIX}/bin/nano'
 {{ end -}}
 
-# Source all files in $ZDOTDIR/aliases/
-for file in $ZDOTDIR/aliases/*.zsh; do
-    source "$file"
-done
+# Source all .zsh files in $ZDOTDIR/aliases/
+for alias_file ($ZDOTDIR/aliases/*) source $alias_file
 
 source $XDG_CONFIG_HOME/op/plugins.sh
 
