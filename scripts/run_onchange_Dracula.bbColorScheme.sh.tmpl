@@ -1,0 +1,14 @@
+{{- if (eq .chezmoi.os "darwin") -}}
+#!/bin/bash
+
+# Dracula.bbColorScheme hash: include {{ .chezmoi.homeDir }}/.local/share/bbedit/themes/dracula/Dracula.bbColorScheme | sha256sum
+
+# make insomnia links
+# check to see if ~/Library/Application Support/BBEdit/Color Schemes/Dracula.bbColorScheme exists and unlink it if it does
+if [ -L ~/Library/Application\ Support/BBEdit/Color\ Schemes/Dracula.bbColorScheme ]; then
+    unlink ~/Library/Application\ Support/BBEdit/Color\ Schemes/Dracula.bbColorScheme
+fi
+
+ln -s ~/.local/share/bbedit/themes/dracula/Dracula.bbColorScheme/Dracula.bbColorScheme ~/Library/Application\ Support/BBEdit/Color\ Schemes/Dracula.bbColorScheme
+
+{{ end -}}
