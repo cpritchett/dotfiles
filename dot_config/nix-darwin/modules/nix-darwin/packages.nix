@@ -80,7 +80,6 @@
       "trunk-io"
       "ytmdesktop-youtube-music"
       "insomnia"
-      "docker"
       "elgato-stream-deck"
       "betterdisplay"
       "microsoft-edge"
@@ -89,6 +88,8 @@
       "betterdiscord-installer"
       "protonvpn"
       "dracula-betterdiscord"
+      "bbedit"
+      "orbstack"
     ];
 
     brews = [
